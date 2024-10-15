@@ -21,11 +21,9 @@ O escopo deste projeto envolve a criação de modelos de predição de tempestad
 
 3. **Desenvolvimento dos Modelos de Predição:** Selecionar e desenvolver um modelo de previsão apropriado para estimar DST, tendo em vista as 3 fases de uma tempestade geomagnética. Isso pode envolver o uso de técnicas de aprendizado de máquina, como regressão, séries temporais ou algoritmos de análise de texto, dependendo da natureza dos dados.
 
-4. **Treinamento e Avaliação do Modelo:** Treinar o modelo com dados históricos e avaliá-lo usando métricas adequadas, como erro médio quadrático (RMSE).
+4. **Análise de Resultados:** Comparar o desempenho dos modelos e entender seus pontos fortes e fracos.
 
-5. **Análise de Resultados:** Comparar o desempenho dos modelos e entender seus pontos fortes e fracos.
-
-6. **Conclusões**: Resumir os principais achados e próximos passos.
+5. **Conclusões**: Resumir os principais achados e próximos passos.
 
 ### Dados:
 
@@ -104,6 +102,14 @@ O modelo é compilado utilizando o otimizador Nadam com uma taxa de aprendizado 
 Após o treinamento, o modelo é avaliado utilizando o conjunto de teste. O erro quadrático médio (RMSE) é calculado para quantificar a precisão das previsões. Um gráfico adicional compara os valores reais e preditos, permitindo uma visualização clara da eficácia do modelo na predição do índice Dst.
 
 ![image](https://github.com/user-attachments/assets/da91ab52-2576-48ba-8dbc-aec8460c27bb)
+
+
+## 3.2 - Processamento e Arquitetura do Modelo Transformer
+
+# ESPERANDO MODELO FICAR PRONTO
+
+
+# 4. **Análise de Resultados**
 
 
 
