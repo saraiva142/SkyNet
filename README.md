@@ -35,15 +35,46 @@ O escopo deste projeto envolve a criação de modelos de predição de tempestad
 
 ### Dados:
 
-[![Static Badge](https://img.shields.io/badge/Dados%20brutos-Link-green?style=for-the-badge&logo=googlesheets)](https://docs.google.com/spreadsheets/d/1jtZ8q0LG3WczgN6ORPzajlErQatH7_3p/edit?usp=sharing&ouid=112578483692686555513&rtpof=true&sd=true)
-[![Static Badge](https://img.shields.io/badge/Dados%20pre_processados-Link-green?style=for-the-badge&logo=googlesheets)](https://docs.google.com/spreadsheets/d/1ix98wju56E6pguswDQhCuiLyve-AKCIi/edit?usp=sharing&ouid=112578483692686555513&rtpof=true&sd=true)
-[![Static Badge](https://img.shields.io/badge/Roteiro%20do%20projeto%20-%20PDF%20-%20red?style=for-the-badge&logo=files&logoColor=red
-)](https://github.com/Joao-vpf/Vdesafiodedados/blob/main/files/Roteiro/Roteiro%20para%20an%C3%A1lise%20dos%20dados%20%20desafio%20V%20%20completo.pdf)  
+[![Static Badge](https://img.shields.io/badge/Dados%20brutos-Link-green?style=for-the-badge&logo=googlesheets)](https://drive.google.com/drive/folders/1S0WJQPltZ0j27zHfx-g2k7t6WiYeO8L-?usp=sharing)
+[![Static Badge](https://img.shields.io/badge/Dados%20pre_processados-Link-green?style=for-the-badge&logo=googlesheets)](https://drive.google.com/drive/folders/1ug2s2DzdGoITI37N39TgTQlN0rowE6Uk?usp=drive_link)
+[![Static Badge](https://img.shields.io/badge/Dicionário%20de%20Dados%20-%20PDF%20-%20red?style=for-the-badge&logo=files&logoColor=red
+)](https://github.com/saraiva142/SkyNet/blob/main/dicion%C3%A1rio%20de%20dados%20-%20VII%20desafio%20CD%202024.pdf)  
 
 ### Codigo:
-
+#ARRUMAR LINKS:
 [![Static Badge](https://img.shields.io/badge/C%C3%B3digo%20do%20projeto-Link-orange?style=for-the-badge&logo=googlecolab)
 ](https://colab.research.google.com/drive/1uCbaxdK39zXcpc2FMXvMa06_0hzMAiBD?usp=sharing)  [![Static Badge](https://img.shields.io/badge/todos%20os%20algoritmos%20usados-Link-blue?style=for-the-badge)
 ](https://github.com/Joao-vpf/Vdesafiodedados/blob/main/files/Code/explicacao.md)
 
+# 1 - **Análise Inicial dos Dados**
 
+A análise inicial de dados é uma etapa onde buscamos compreender a estrutura dos dados e identificar quais variáveis têm maior impacto nas respostas que estamos tentando modelar. No nosso caso, o objetivo é entender como diferentes variáveis afetam o índice Dst, que está relacionado a tempestades geomagnéticas, e, a partir disso, descobrir os dados mais importantes para alimentar nossos modelos preditivos.
+
+### 1.1 - Visualização e Estatísticas Descritivas
+
+A seguir, foram geradas visualizações iniciais e estatísticas descritivas para obter uma visão geral da distribuição dos dados. A inspeção visual dos dados e o cálculo de estatísticas básicas como média, desvio padrão, valores mínimos e máximos também nos ajudaram a identificar possíveis padrões e anomalias nos dados, como variações inesperadas em determinadas variáveis que poderiam prejudicar a performance do modelo.
+
+![image](https://github.com/user-attachments/assets/40d95a79-d2c7-4bc3-a3cf-405f8bf6a3e3)
+
+![image](https://github.com/user-attachments/assets/d3ba8495-f717-42bb-8f7c-a6bc2dbf4e88)
+
+A análise da distribuição do índice Dst, que é a variável alvo, revelou a concentração de valores em determinadas faixas e indicou a presença de outliers (eventos extremos). Esses outliers podem ser eventos extremos importantes para a modelagem de tempestades geomagnéticas.
+
+![image](https://github.com/user-attachments/assets/a0d8ac24-2237-4d99-a7a2-1945dabbd381)
+
+### 1.2 - Análise de Correlação
+
+Uma das principais ferramentas na análise de dados é a correlação, que nos permite medir a força e a direção das relações entre as variáveis. Para isso, foi criada uma matriz de correlação para as colunas numéricas do conjunto de dados de vento solar (solar_wind.csv). Essa matriz é uma peça fundamental para identificar quais variáveis podem ser mais relevantes para a predição do índice Dst.
+
+Além disso, foi feita uma análise específica da correlação entre as variáveis de vento solar e o índice Dst. Ao combinar as variáveis do vento solar com as informações do índice Dst, conseguimos ver diretamente quais delas têm uma relação mais forte com o Dst. Isso nos ajudará a focar nas features que mais impactam o fenômeno que estamos estudando — tempestades geomagnéticas.
+
+![image](https://github.com/user-attachments/assets/98f28711-63b7-4e73-8888-4e4df6e26349)
+
+Valores próximos de 1 ou -1 indicam uma correlação forte, onde 1 sugere uma relação positiva direta e -1 uma relação inversa. Ao identificar as variáveis cujos coeficientes de correlação com o Dst se aproximam de 1 ou -1, podemos determinar quais fatores do vento solar ou posição dos satélites têm maior influência sobre as tempestades geomagnéticas. Essas variáveis são consideradas as mais importantes para o nosso modelo de previsão, já que sua relação mais forte com o Dst sugere que podem ser preditores chave para a modelagem.
+
+Para ilustrar melhor essas correlações, geramos o gráfico Correlação das variáveis com o índice Dst, que apresenta visualmente a força e o sentido da correlação de cada variável. Isso nos permite priorizar variáveis com maiores pesos na construção do modelo de predição, focando naquelas que têm impacto mais significativo sobre o índice Dst.
+
+![image](https://github.com/user-attachments/assets/e0e36d92-05f2-4368-80a5-e6519f4626ca)
+
+
+# 2. **Pré-processamento de Dados:**
