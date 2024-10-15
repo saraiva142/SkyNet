@@ -99,3 +99,11 @@ Tendo em vista a arquitetura do nosso RNN, esse modelo é construído utilizando
 
 O modelo é compilado utilizando o otimizador Nadam com uma taxa de aprendizado de 0.0001 e a função de perda mean squared error (RMSE), adequada para problemas. Os dados são divididos em conjuntos de treinamento e teste, com 80% dos dados utilizados para treinamento e 20% para teste. O treinamento do modelo é realizado por 100 épocas, utilizando um conjunto de validação que representa 20% dos dados de treinamento. O treinamento é interrompido antecipadamente se a perda de validação não melhorar por 10 épocas consecutivas. Durante o treinamento, a curva de perda é plotada para visualizar a convergência do modelo.
 
+![image](https://github.com/user-attachments/assets/0743b4e5-c128-45f3-b746-402f698c7b6d)
+
+Após o treinamento, o modelo é avaliado utilizando o conjunto de teste. O erro quadrático médio (RMSE) é calculado para quantificar a precisão das previsões. Um gráfico adicional compara os valores reais e preditos, permitindo uma visualização clara da eficácia do modelo na predição do índice Dst.
+
+![image](https://github.com/user-attachments/assets/da91ab52-2576-48ba-8dbc-aec8460c27bb)
+
+
+
