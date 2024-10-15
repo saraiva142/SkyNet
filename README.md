@@ -1,13 +1,7 @@
 <h1 align="center">SKYNET - IIV DESAFIO DE CIÊNCIA DE DADOS 🤖 </h1>
 
 ## Equipe:
-
-<div>
-  
-  [<img src="https://avatars.githubusercontent.com/u/64429904?v=4" alt="João Victor Saraiva" width="100">](https://github.com/saraiva142)
-  [<img src = "https://avatars.githubusercontent.com/u/147951553?v=4" alt ="Ludmila" width = "100">](https://github.com/LudLES-t)
-  
-</div>
+![image](https://github.com/user-attachments/assets/82ff4621-877c-4b38-aede-2cdea8b95dc0)
 
 ## Projeto:
 
