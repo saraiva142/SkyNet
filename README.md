@@ -71,4 +71,20 @@ Para ilustrar melhor essas correlações, geramos o gráfico Correlação das va
 ![image](https://github.com/user-attachments/assets/e0e36d92-05f2-4368-80a5-e6519f4626ca)
 
 
-# 2. **Pré-processamento de Dados:**
+# 2. **Pré-processamento de Dados**
+
+No processo de modelagem, o pré-processamento dos dados é uma etapa fundamental para garantir que o modelo receba entradas limpas e bem estruturadas. Ele envolve várias tarefas, como a limpeza de dados inconsistentes ou ausentes, a codificação de variáveis categóricas para permitir que modelos numéricos as interpretem, e a normalização das variáveis numéricas, ajustando-as para uma escala comum. Esse tratamento cuidadoso é crucial para melhorar a qualidade dos dados, reduzir viés e garantir que o modelo capture padrões relevantes de maneira eficaz.
+
+
+
+#ESPERANDO RETORNO DA LUD
+
+
+
+# 3. **Desenvolvimento dos Modelos de Predição**
+
+Para o desenvolvimento dos modelos de predição do índice Dst, adotamos uma abordagem baseada em Redes Neurais Recorrentes (RNN) e Transformers, ambas técnicas avançadas e adequadas para modelagem de séries temporais. Como estamos lidando com dados temporais relacionados à atividade geomagnética, essas arquiteturas são particularmente eficazes para capturar a dinâmica complexa das tempestades geomagnéticas, divididas em três fases: início, pico, e recuperação.
+
+As RNNs (Redes Neurais Recorrentes) são utilizadas para capturar as dependências temporais entre os eventos passados e presentes. Essa capacidade de "memória" permite que a rede aprenda padrões recorrentes nos dados de vento solar e atividade solar que influenciam o índice Dst ao longo do tempo.
+
+O modelo de Transformer, por sua vez, supera algumas limitações das RNNs, como a dificuldade de capturar relações de longo prazo. Ele utiliza mecanismos de atenção, que identificam de forma mais eficiente quais partes da série temporal são mais relevantes para a predição em cada ponto. Isso é particularmente útil na modelagem de séries temporais complexas, onde o comportamento das variáveis pode mudar de forma imprevisível entre as fases da tempestade.
