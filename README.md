@@ -33,7 +33,6 @@ O escopo deste projeto envolve a criação de modelos de predição de tempestad
 )](https://github.com/saraiva142/SkyNet/blob/main/dicion%C3%A1rio%20de%20dados%20-%20VII%20desafio%20CD%202024.pdf)  
 
 ### Codigo:
-#ARRUMAR LINKS:
 [![Static Badge](https://img.shields.io/badge/C%C3%B3digo%20do%20RNN-Link-orange?style=for-the-badge&logo=googlecolab)
 ](https://colab.research.google.com/drive/1uLOrRYRu0naYLgmg8IZW7uiGS4rvxcmh?usp=sharing)
 [![Static Badge](https://img.shields.io/badge/C%C3%B3digo%20do%20Transformer-Link-orange?style=for-the-badge&logo=googlecolab)
