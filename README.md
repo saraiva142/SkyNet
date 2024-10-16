@@ -76,8 +76,33 @@ Para ilustrar melhor essas correlações, geramos o gráfico Correlação das va
 No processo de modelagem, o pré-processamento dos dados é uma etapa fundamental para garantir que o modelo receba entradas limpas e bem estruturadas. Ele envolve várias tarefas, como a limpeza de dados inconsistentes ou ausentes, a codificação de variáveis categóricas para permitir que modelos numéricos as interpretem, e a normalização das variáveis numéricas, ajustando-as para uma escala comum. Esse tratamento cuidadoso é crucial para melhorar a qualidade dos dados, reduzir viés e garantir que o modelo capture padrões relevantes de maneira eficaz.
 
 
+O dataset foi carregado a partir de um arquivo CSV usando a função pd.read_csv(). A primeira etapa foi visualizar a estrutura dos dados com print(data.head()), para garantir que as colunas e os valores estejam conforme esperado. Os valores faltantes nas colunas numéricas foram tratados utilizando a *interpolação linear*, que preenche os dados com base nos valores adjacentes, garantindo uma transição suave entre os pontos ausentes.Para quaisquer valores extremos (infinito), eles foram substituídos por NaN e preenchidos posteriormente com a média da coluna. Isso garante que o modelo não seja afetado por valores distorcidos ou ausentes.
 
-#ESPERANDO RETORNO DA LUD
+*Mapeamento de Dados em Blocos*: Para criar uma estrutura de dados mais uniforme e facilitar a modelagem, os dados foram organizados em blocos de 60 observações. Isso transforma as séries temporais em blocos de tamanho fixo, facilitando a manipulação e o treinamento do modelo.
+
+*Normalização dos Dados*: Antes de treinar o modelo, é essencial que os dados sejam normalizados para garantir que todas as features tenham a mesma escala:
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(features)
+Isso assegura que a variação entre as diferentes colunas seja padronizada, o que é importante para algoritmos como o *Transformer*, que são sensíveis a variações na escala dos dados.
+
+A análise exploratória ajuda a entender os padrões nos dados e a detectar quaisquer anomalias ou relações que possam influenciar o modelo. Com base no código, a seguinte análise foi realizada:
+
+- *Visualização da Estrutura dos Dados*:
+Após a preparação inicial, os dados foram reestruturados em blocos e visualizados novamente para garantir que a estrutura estava adequada.
+
+*Seleção de Features e Target*: As principais features escolhidas para modelagem foram *"temperature"* e *"speed", enquanto a variável alvo foi *"dst"**
+
+*Criação de Sequências*: Para capturar a dinâmica temporal dos dados, foi necessário transformar os dados em sequências temporais, onde 60 passos anteriores foram usados para prever o próximo valor:
+
+## 2.1 - Insights e Desafios:
+
+- *Desafios com Valores Faltantes*: Muitos dados continham valores ausentes ou extremos, o que exigiu a aplicação de técnicas de interpolação e normalização para tornar os dados utilizáveis no modelo.
+- *Dinamismo Temporal: A criação de sequências temporais foi um passo importante, pois o **Transformer* foi configurado para capturar essas dinâmicas e padrões de longo prazo, que são cruciais em dados temporais.
+- *Normalização*: O processo de normalização ajudou a estabilizar os valores, tornando o modelo mais eficaz no aprendizado de padrões relevantes.
+
+## 2.2 - Conclusão da Análise Exploratória:
+
+A análise exploratória dos dados e a visualização inicial da estrutura ajudaram a guiar as decisões de modelagem, como quais variáveis usar e como preparar os dados para o modelo *Transformer*. Insights sobre a estrutura dos dados e os desafios enfrentados durante a limpeza ajudaram a garantir que o modelo recebesse dados bem preparados e consistentes para treinamento.
 
 
 
@@ -123,9 +148,13 @@ O treinamento do modelo ocorre com o uso de um otimizador Adam e uma função de
 # 4. **Análise de Resultados**
 
 ## 4.1 - Resultado RNN
+
+O modelo RNN gerou um valor de RMSE de 14.06, o que indica o quão bem o modelo consegue prever os valores do índice Dst em relação aos dados reais. Esse resultado reflete a precisão do modelo em capturar padrões complexos das séries temporais, embora ainda exista uma margem de erro que pode ser melhorada com ajustes no modelo ou no pré-processamento dos dados.
 ![image](https://github.com/user-attachments/assets/cb78d96a-127e-4e05-915b-a1d78ac1cf9a)
 
+
 ## 4.2 - Resultados Transformer
+O modelo Transformer apresentou um desempenho estável ao longo das 10 épocas, com o RMSE variando entre 9.44 e 10.31. O menor erro ocorreu na primeira época com um RMSE de 9.44, enquanto a performance geral mostrou pouca oscilação. Isso indica que o modelo consegue capturar adequadamente os padrões dos dados, mas ainda há espaço para melhorias no ajuste de hiperparâmetros ou otimização dos dados de entrada. Comparado ao RNN, o Transformer apresentou uma redução significativa no erro, sugerindo maior eficiência em lidar com dependências de longo prazo nas séries temporais.
 ![image](https://github.com/user-attachments/assets/f0e2fe7c-74be-4f08-868e-5dde77d0b42a)
 
 
