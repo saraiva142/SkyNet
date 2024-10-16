@@ -100,11 +100,13 @@ Tendo em vista a arquitetura do nosso RNN, esse modelo é construído utilizando
 
 O modelo é compilado utilizando o otimizador Nadam com uma taxa de aprendizado de 0.0001 e a função de perda mean squared error (RMSE), adequada para problemas. Os dados são divididos em conjuntos de treinamento e teste, com 80% dos dados utilizados para treinamento e 20% para teste. O treinamento do modelo é realizado por 100 épocas, utilizando um conjunto de validação que representa 20% dos dados de treinamento. O treinamento é interrompido antecipadamente se a perda de validação não melhorar por 10 épocas consecutivas. Durante o treinamento, a curva de perda é plotada para visualizar a convergência do modelo.
 
-![image](https://github.com/user-attachments/assets/0743b4e5-c128-45f3-b746-402f698c7b6d)
+![image](https://github.com/user-attachments/assets/51cb630d-9409-4607-b41f-644e71e6e508)
+
 
 Após o treinamento, o modelo é avaliado utilizando o conjunto de teste. O erro quadrático médio (RMSE) é calculado para quantificar a precisão das previsões. Um gráfico adicional compara os valores reais e preditos, permitindo uma visualização clara da eficácia do modelo na predição do índice Dst.
 
-![image](https://github.com/user-attachments/assets/da91ab52-2576-48ba-8dbc-aec8460c27bb)
+![image](https://github.com/user-attachments/assets/d4dbd2df-6115-4414-adb8-65467c2682ae)
+
 
 
 ## 3.2 - Processamento e Arquitetura do Modelo Transformer
@@ -121,6 +123,11 @@ O treinamento do modelo ocorre com o uso de um otimizador Adam e uma função de
 
 # 4. **Análise de Resultados**
 
+## 4.1 - Resultado RNN
+![image](https://github.com/user-attachments/assets/cb78d96a-127e-4e05-915b-a1d78ac1cf9a)
+
+## 4.2 - Resultados Transformer
+![image](https://github.com/user-attachments/assets/f0e2fe7c-74be-4f08-868e-5dde77d0b42a)
 
 
 # 5. **Conclusão**
