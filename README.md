@@ -35,7 +35,10 @@ O escopo deste projeto envolve a criação de modelos de predição de tempestad
 ### Codigo:
 #ARRUMAR LINKS:
 [![Static Badge](https://img.shields.io/badge/C%C3%B3digo%20do%20RNN-Link-orange?style=for-the-badge&logo=googlecolab)
-](https://colab.research.google.com/drive/1uLOrRYRu0naYLgmg8IZW7uiGS4rvxcmh?usp=sharing)  [![Static Badge](https://img.shields.io/badge/todos%20os%20modelos%20usados-Link-blue?style=for-the-badge)
+](https://colab.research.google.com/drive/1uLOrRYRu0naYLgmg8IZW7uiGS4rvxcmh?usp=sharing)
+[![Static Badge](https://img.shields.io/badge/C%C3%B3digo%20do%20Transformer-Link-orange?style=for-the-badge&logo=googlecolab)
+](https://colab.research.google.com/drive/1uLOrRYRu0naYLgmg8IZW7uiGS4rvxcmh?usp=sharing)
+[![Static Badge](https://img.shields.io/badge/todos%20os%20modelos%20usados-Link-blue?style=for-the-badge)
 ](https://github.com/saraiva142/SkyNet/tree/main)
 
 # 1 - **Análise Inicial dos Dados**
@@ -129,4 +132,5 @@ A escolha do modelo, com foco em arquiteturas avançadas como RNN e Transformer,
 Em termos práticos, os modelos desenvolvidos têm o potencial de serem aplicados em sistemas de monitoramento e previsão de tempestades geomagnéticas, auxiliando na proteção de infraestruturas tecnológicas sensíveis a distúrbios no campo magnético da Terra. Como próximos passos, seria interessante explorar a implementação de pipelines de aprendizado contínuo, permitindo que os modelos se adaptem em tempo real às mudanças nas condições do vento solar, tornando o sistema mais robusto e eficaz para aplicações práticas
 
 
-
+Obrigado
+👋 🤖
