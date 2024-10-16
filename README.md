@@ -150,11 +150,13 @@ O treinamento do modelo ocorre com o uso de um otimizador Adam e uma função de
 ## 4.1 - Resultado RNN
 
 O modelo RNN gerou um valor de RMSE de 14.06, o que indica o quão bem o modelo consegue prever os valores do índice Dst em relação aos dados reais. Esse resultado reflete a precisão do modelo em capturar padrões complexos das séries temporais, embora ainda exista uma margem de erro que pode ser melhorada com ajustes no modelo ou no pré-processamento dos dados.
+
 ![image](https://github.com/user-attachments/assets/cb78d96a-127e-4e05-915b-a1d78ac1cf9a)
 
 
 ## 4.2 - Resultados Transformer
 O modelo Transformer apresentou um desempenho estável ao longo das 10 épocas, com o RMSE variando entre 9.44 e 10.31. O menor erro ocorreu na primeira época com um RMSE de 9.44, enquanto a performance geral mostrou pouca oscilação. Isso indica que o modelo consegue capturar adequadamente os padrões dos dados, mas ainda há espaço para melhorias no ajuste de hiperparâmetros ou otimização dos dados de entrada. Comparado ao RNN, o Transformer apresentou uma redução significativa no erro, sugerindo maior eficiência em lidar com dependências de longo prazo nas séries temporais.
+
 ![image](https://github.com/user-attachments/assets/f0e2fe7c-74be-4f08-868e-5dde77d0b42a)
 
 
