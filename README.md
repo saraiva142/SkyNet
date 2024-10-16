@@ -34,9 +34,9 @@ O escopo deste projeto envolve a criação de modelos de predição de tempestad
 
 ### Codigo:
 #ARRUMAR LINKS:
-[![Static Badge](https://img.shields.io/badge/C%C3%B3digo%20do%20projeto-Link-orange?style=for-the-badge&logo=googlecolab)
-](https://colab.research.google.com/drive/1uCbaxdK39zXcpc2FMXvMa06_0hzMAiBD?usp=sharing)  [![Static Badge](https://img.shields.io/badge/todos%20os%20algoritmos%20usados-Link-blue?style=for-the-badge)
-](https://github.com/Joao-vpf/Vdesafiodedados/blob/main/files/Code/explicacao.md)
+[![Static Badge](https://img.shields.io/badge/C%C3%B3digo%20do%20RNN-Link-orange?style=for-the-badge&logo=googlecolab)
+](https://colab.research.google.com/drive/1uLOrRYRu0naYLgmg8IZW7uiGS4rvxcmh?usp=sharing)  [![Static Badge](https://img.shields.io/badge/todos%20os%20modelos%20usados-Link-blue?style=for-the-badge)
+](https://github.com/saraiva142/SkyNet/tree/main)
 
 # 1 - **Análise Inicial dos Dados**
 
@@ -106,8 +106,15 @@ Após o treinamento, o modelo é avaliado utilizando o conjunto de teste. O erro
 
 ## 3.2 - Processamento e Arquitetura do Modelo Transformer
 
-# ESPERANDO MODELO FICAR PRONTO
+O Transformer para séries temporais funciona capturando padrões e dependências em longas sequências de dados temporais. Ele usa mecanismos de autoatenção, que permitem que o modelo identifique quais partes de uma sequência são mais importantes para prever o próximo valor, independentemente da distância temporal. Diferente de RNNs, ele processa todos os pontos de uma sequência simultaneamente, o que torna o treinamento mais eficiente e ajuda a capturar relações complexas. A estrutura inclui camadas de codificação que transformam os dados de entrada em representações mais abstratas e úteis para a predição.
 
+O modelo Transformer é um modelo originalmente utilizado para problemas de linguagens naturais, o modelo que estamos utilizando segue uma arquitetura bem estabelecida, mas adaptada para o contexto da predição de séries temporais do índice Dst. A base do modelo envolve a criação de sequências de dados históricos para fornecer contexto ao Transformer, que consegue capturar padrões temporais e dependências de longo prazo nos dados.
+
+Após o pré-processamento, criamos sequências de dados, onde cada sequência inclui um conjunto de 60 observações temporais consecutivas, que servem como base para o modelo prever o índice Dst do próximo período (dst incluso a cada 60 linhas). Essas sequências ajudam o Transformer a aprender sobre a evolução dos padrões temporais ao longo do tempo. 
+
+O modelo Transformer foi projetado com várias camadas específicas. Ele começa com uma camada de projeção linear que ajusta a dimensão de entrada para o tamanho do modelo (d_model), seguida por um bloco Transformer que inclui camadas de autoatenção multi-cabeça (nhead=4), e camadas feedforward para capturar interações não-lineares nos dados. Utilizamos duas camadas codificadoras (num_encoder_layers=2) para garantir que o modelo capture tanto dependências curtas quanto longas nas sequências temporais, e um fator de regularização (dropout=0.3) para evitar o sobreajuste.
+
+O treinamento do modelo ocorre com o uso de um otimizador Adam e uma função de perda de erro quadrático médio (MSE), que mede a diferença entre os valores preditos e os valores reais do índice Dst. Durante o treinamento, aplicamos early stopping, uma técnica que interrompe o treinamento se a perda de validação não melhorar por várias épocas consecutivas, evitando que o modelo aprenda ruídos indesejados nos dados. Avaliamos o desempenho do modelo com base no erro médio quadrático da raiz (RMSE), que fornece uma métrica de fácil interpretação para analisar a qualidade das previsões em relação aos dados reais, porém antes de entrar na função de erro, é passado uma normalização usando a função de sigmoide para evitar erros na avaliação.
 
 # 4. **Análise de Resultados**
 
