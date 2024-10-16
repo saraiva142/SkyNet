@@ -92,7 +92,7 @@ Após a preparação inicial, os dados foram reestruturados em blocos e visualiz
 
 *Seleção de Features e Target*: As principais features escolhidas para modelagem foram *"temperature"* e *"speed", enquanto a variável alvo foi *"dst"**
 
-*Criação de Sequências*: Para capturar a dinâmica temporal dos dados, foi necessário transformar os dados em sequências temporais, onde 60 passos anteriores foram usados para prever o próximo valor:
+*Criação de Sequências*: Para capturar a dinâmica temporal dos dados, foi necessário transformar os dados em sequências temporais, onde 60 passos anteriores foram usados para prever o próximo valor.
 
 ## 2.1 - Insights e Desafios:
 
