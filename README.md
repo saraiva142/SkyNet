@@ -44,7 +44,7 @@ O escopo deste projeto envolve a criação de modelos de predição de tempestad
 
 A análise inicial de dados é uma etapa onde buscamos compreender a estrutura dos dados e identificar quais variáveis têm maior impacto nas respostas que estamos tentando modelar. No nosso caso, o objetivo é entender como diferentes variáveis afetam o índice Dst, que está relacionado a tempestades geomagnéticas, e, a partir disso, descobrir os dados mais importantes para alimentar nossos modelos preditivos.
 
-### 1.1 - Visualização e Estatísticas Descritivas
+## 1.1 - Visualização e Estatísticas Descritivas
 
 A seguir, foram geradas visualizações iniciais e estatísticas descritivas para obter uma visão geral da distribuição dos dados. A inspeção visual dos dados e o cálculo de estatísticas básicas como média, desvio padrão, valores mínimos e máximos também nos ajudaram a identificar possíveis padrões e anomalias nos dados, como variações inesperadas em determinadas variáveis que poderiam prejudicar a performance do modelo.
 
@@ -56,7 +56,7 @@ A análise da distribuição do índice Dst, que é a variável alvo, revelou a 
 
 ![image](https://github.com/user-attachments/assets/a0d8ac24-2237-4d99-a7a2-1945dabbd381)
 
-### 1.2 - Análise de Correlação
+## 1.2 - Análise de Correlação
 
 Uma das principais ferramentas na análise de dados é a correlação, que nos permite medir a força e a direção das relações entre as variáveis. Para isso, foi criada uma matriz de correlação para as colunas numéricas do conjunto de dados de vento solar (solar_wind.csv). Essa matriz é uma peça fundamental para identificar quais variáveis podem ser mais relevantes para a predição do índice Dst.
 
