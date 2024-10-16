@@ -113,3 +113,13 @@ Após o treinamento, o modelo é avaliado utilizando o conjunto de teste. O erro
 
 
 
+# 5. **Conclusão**
+
+Ao longo deste projeto, aprendemos diversas lições valiosas sobre o desenvolvimento de modelos preditivos utilizando redes neurais, especialmente em cenários complexos como a previsão de tempestades geomagnéticas através do índice Dst. Um dos principais desafios enfrentados foi o tratamento e a preparação dos dados, o que reforçou a importância do pré-processamento rigoroso para garantir a qualidade das previsões. A normalização e a interpolação de dados ausentes se mostraram fundamentais para lidar com a natureza heterogênea dos dados coletados do vento solar e de outros fenômenos relacionados ao clima espacial.
+
+A escolha do modelo, com foco em arquiteturas avançadas como RNN e Transformer, também foi um aprendizado importante. Cada um desses modelos trouxe vantagens específicas para a modelagem de séries temporais, permitindo capturar dinâmicas temporais complexas e, ao mesmo tempo, controlar o overfitting através de regularização e camadas de dropout (eventos extremos). A métrica RMSE nos permitiu avaliar de forma clara e objetiva o desempenho dos modelos, fornecendo uma base sólida para comparar resultados e ajustar a arquitetura e os hiperparâmetros do modelo conforme necessário.
+
+Em termos práticos, os modelos desenvolvidos têm o potencial de serem aplicados em sistemas de monitoramento e previsão de tempestades geomagnéticas, auxiliando na proteção de infraestruturas tecnológicas sensíveis a distúrbios no campo magnético da Terra. Como próximos passos, seria interessante explorar a implementação de pipelines de aprendizado contínuo, permitindo que os modelos se adaptem em tempo real às mudanças nas condições do vento solar, tornando o sistema mais robusto e eficaz para aplicações práticas
+
+
+
