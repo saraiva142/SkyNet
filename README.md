@@ -97,7 +97,7 @@ Após a preparação inicial, os dados foram reestruturados em blocos e visualiz
 ## 2.1 - Insights e Desafios:
 
 - *Desafios com Valores Faltantes*: Muitos dados continham valores ausentes ou extremos, o que exigiu a aplicação de técnicas de interpolação e normalização para tornar os dados utilizáveis no modelo.
-- *Dinamismo Temporal: A criação de sequências temporais foi um passo importante, pois o **Transformer* foi configurado para capturar essas dinâmicas e padrões de longo prazo, que são cruciais em dados temporais.
+- *Dinamismo Temporal*: A criação de sequências temporais foi um passo importante, pois o **Transformer* foi configurado para capturar essas dinâmicas e padrões de longo prazo, que são cruciais em dados temporais.
 - *Normalização*: O processo de normalização ajudou a estabilizar os valores, tornando o modelo mais eficaz no aprendizado de padrões relevantes.
 
 ## 2.2 - Conclusão da Análise Exploratória:
